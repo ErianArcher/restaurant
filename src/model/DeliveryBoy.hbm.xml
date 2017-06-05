@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="model">
+    <class name="DeliveryBoy" table="deliveryboy">
+        <meta attribute="class-description">
+            The class contains the detail of delivery boys who is assigned to different area
+        </meta>
+        <id name="id" type="int" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="areaCode" type="int" column="area_code"/>
+    </class>
+</hibernate-mapping>

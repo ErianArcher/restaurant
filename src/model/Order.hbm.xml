@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="model">
+    <class name="Order" table="orders">
+        <meta attribute="class-description">
+            This class contains the order records.
+        </meta>
+        <id name="id" column="id">
+            <generator class="native"/>
+        </id>
+        <many-to-one name="deliveryBoy" column="delivery_boy_id"
+                     class="DeliveryBoy"/>
+    </class>
+</hibernate-mapping>

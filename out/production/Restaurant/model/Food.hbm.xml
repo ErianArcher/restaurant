@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="model">
+    <class name="Food" table="food">
+        <meta attribute="class-description">
+            This class contains detail of food offered by restaurant
+        </meta>
+        <id name="id" type="int" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="name" type="string" column="name"/>
+        <property name="price" type="double" column="price"/>
+        <property name="type" type="string" column="type"/>
+        <property name="introduction" type="text" column="introduction"/>
+    </class>
+</hibernate-mapping>

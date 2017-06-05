@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-configuration SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.MySQLDialect
+        </property>
+        <property name="hibernate.connection.driver_class">
+            com.mysql.jdbc.Driver
+        </property>
+
+        <property name="show_sql"> true </property>
+        <!-- Assume test is the database name -->
+        <property name="hibernate.connection.url">
+            jdbc:mysql://localhost:3306/restaurant
+        </property>
+        <property name="hibernate.connection.username">
+            root
+        </property>
+        <property name="hibernate.connection.password">
+            Liang1996
+        </property>
+
+        <!-- List of XML mapping files -->
+        <mapping resource="model/Food.hbm.xml"/>
+        <mapping resource="model/Customer.hbm.xml"/>
+        <mapping resource="model/DeliveryBoy.hbm.xml"/>
+        <mapping resource="model/Order.hbm.xml"/>
+        <mapping resource="model/OrderDetail.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>
